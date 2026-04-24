@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { pageOrder } from "@/lib/page-order";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://33dayswithstjoseph.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://saintjoseph-33.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

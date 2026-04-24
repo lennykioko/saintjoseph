@@ -15,7 +15,7 @@ const nunito = Nunito({
 });
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://33dayswithstjoseph.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://saintjoseph-33.vercel.app";
 const siteName = "33 Days with St. Joseph";
 const siteDescription =
   "A 33-day consecration to St. Joseph — daily prayers, reflections, scripture, and daily challenges.";
