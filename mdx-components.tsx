@@ -34,12 +34,13 @@ function A({ href, children, ...rest }: ComponentProps<"a">) {
   );
 }
 
+export const mdxComponents: MDXComponents = {
+  a: A,
+  Cite,
+  FootnoteRef,
+  ScriptureLink,
+};
+
 export function useMDXComponents(components: MDXComponents): MDXComponents {
-  return {
-    a: A,
-    Cite,
-    FootnoteRef,
-    ScriptureLink,
-    ...components,
-  };
+  return { ...mdxComponents, ...components };
 }

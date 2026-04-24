@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Content, { frontmatter } from "@/content/endnotes.mdx";
 import { PageHeader } from "@/components/DayHeader";
 import { PrevNext } from "@/components/PrevNext";
-import { useMDXComponents } from "@/mdx-components";
+import { mdxComponents } from "@/mdx-components";
 
 const fm = (frontmatter ?? {}) as { title?: string };
 
@@ -11,12 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default function EndnotesPage() {
-  const components = useMDXComponents({});
   return (
     <article>
       <PageHeader title={fm.title ?? "Endnotes"} />
       <div className="prose">
-        <Content components={components} />
+        <Content components={mdxComponents} />
       </div>
       <PrevNext path="/endnotes" />
     </article>

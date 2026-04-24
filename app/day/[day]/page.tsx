@@ -4,7 +4,8 @@ import { TOTAL_DAYS } from "@/lib/page-order";
 import { DayHeader } from "@/components/DayHeader";
 import { MarkCompleteButton } from "@/components/MarkCompleteButton";
 import { PrevNext } from "@/components/PrevNext";
-import { useMDXComponents } from "@/mdx-components";
+import { mdxComponents } from "@/mdx-components";
+import type { MDXComponents } from "mdx/types";
 import type { ComponentType } from "react";
 
 type Params = { day: string };
@@ -14,7 +15,7 @@ export function generateStaticParams(): Params[] {
 }
 
 type DayModule = {
-  default: ComponentType<{ components?: ReturnType<typeof useMDXComponents> }>;
+  default: ComponentType<{ components?: MDXComponents }>;
   frontmatter?: { day?: number; theme?: string };
 };
 
@@ -46,13 +47,12 @@ export default async function DayPage({ params }: { params: Promise<Params> }) {
   if (!mod) notFound();
   const MDXContent = mod.default;
   const theme = mod.frontmatter?.theme ?? `Day ${day}`;
-  const components = useMDXComponents({});
 
   return (
     <article>
       <DayHeader day={day} theme={theme} />
       <div className="prose">
-        <MDXContent components={components} />
+        <MDXContent components={mdxComponents} />
       </div>
       <MarkCompleteButton day={day} />
       <PrevNext path={`/day/${day}`} />

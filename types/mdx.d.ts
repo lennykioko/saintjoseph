@@ -6,3 +6,5 @@ declare module "*.mdx" {
   const MDXComponent: ComponentType<{ components?: MDXComponents }>;
   export default MDXComponent;
 }
+
+declare module "*.css";
