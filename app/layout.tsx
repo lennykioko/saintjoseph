@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { ProgressProvider } from "@/lib/progress-context";
 import { SidebarProvider } from "@/components/sidebar-context";
 import { Navbar } from "@/components/Navbar";
@@ -134,6 +135,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </SidebarProvider>
         </ProgressProvider>
+        <Analytics />
       </body>
     </html>
   );
