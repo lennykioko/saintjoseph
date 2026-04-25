@@ -18,7 +18,7 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://saintjoseph-33.vercel.app";
 const siteName = "33 Days with St. Joseph";
 const siteDescription =
-  "A 33-day consecration to St. Joseph — daily prayers, reflections, scripture, and daily challenges.";
+  "A 33-day consecration to St. Joseph — daily prayers, scripture, reflections, the Litany of St. Joseph, and a daily spiritual challenge.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
