@@ -5,7 +5,17 @@ const siteUrl =
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*", allow: "/" }],
+    rules: [
+      { userAgent: "*", allow: "/" },
+      { userAgent: "facebookexternalhit", allow: "/" },
+      { userAgent: "facebookcatalog", allow: "/" },
+      { userAgent: "Twitterbot", allow: "/" },
+      { userAgent: "LinkedInBot", allow: "/" },
+      { userAgent: "WhatsApp", allow: "/" },
+      { userAgent: "Slackbot", allow: "/" },
+      { userAgent: "TelegramBot", allow: "/" },
+      { userAgent: "Discordbot", allow: "/" },
+    ],
     sitemap: `${siteUrl}/sitemap.xml`,
     host: siteUrl,
   };
