@@ -86,6 +86,13 @@ function SidebarContent() {
     >
       <div className="flex-1 overflow-y-auto px-3 py-6">
         <Link
+          href="/"
+          className={linkClass("/", "font-semibold")}
+          aria-current={pathname === "/" ? "page" : undefined}
+        >
+          Home
+        </Link>
+        <Link
           href="/introduction"
           className={linkClass("/introduction", "font-semibold")}
           aria-current={pathname === "/introduction" ? "page" : undefined}
