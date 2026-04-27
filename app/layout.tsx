@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { ProgressProvider } from "@/lib/progress-context";
 import { SidebarProvider } from "@/components/sidebar-context";
@@ -96,6 +97,14 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={nunito.variable}>
+      <head>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="23483c43-0b62-4443-a3dd-3830c3bc0b8e"
+          strategy="afterInteractive"
+        />
+      </head>
       <body>
         <script
           type="application/ld+json"
