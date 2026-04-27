@@ -10,7 +10,7 @@ export default function HomePage() {
         <div className="shrink-0 w-32 sm:w-36 mx-auto sm:mx-0">
           <div className="relative aspect-[3/5] rounded-md overflow-hidden ring-1 ring-[var(--color-border)] shadow-sm bg-[var(--color-accent-soft)]">
             <Image
-              src="/saintjoseph.jpeg"
+              src="/saintjoseph.png"
               alt="St. Joseph, Terror of Demons — painting by Bernadette Carstensen (2020), commissioned by Fr. Donald Calloway, MIC"
               fill
               priority

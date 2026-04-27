@@ -55,21 +55,11 @@ export const metadata: Metadata = {
     title: siteName,
     description: siteDescription,
     locale: "en_US",
-    images: [
-      {
-        url: "/saintjoseph.jpeg",
-        width: 558,
-        height: 933,
-        alt: "St. Joseph, Terror of Demons — painting by Bernadette Carstensen (2020), commissioned by Fr. Donald Calloway, MIC",
-        type: "image/jpeg",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
-    images: ["/saintjoseph.jpeg"],
   },
   robots: {
     index: true,
@@ -81,10 +71,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
-  },
-  icons: {
-    icon: "/saintjoseph.jpeg",
-    apple: "/saintjoseph.jpeg",
   },
 };
 
