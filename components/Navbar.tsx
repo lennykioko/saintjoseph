@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <header
-      className="sticky top-0 z-30 h-16 border-b border-[var(--color-border)] bg-[var(--color-surface)]"
+      className="sticky top-0 z-30 h-16 border-b border-border bg-surface"
       role="banner"
     >
       <div className="h-full flex items-center gap-3 px-4 sm:px-6">
@@ -24,18 +24,18 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2 no-underline">
           <span
             aria-hidden="true"
-            className="text-[var(--color-accent)] text-xl leading-none"
+            className="text-accent text-xl leading-none"
           >
             ✠
           </span>
-          <span className="font-extrabold text-[18px] tracking-tight text-[var(--color-text)]">
+          <span className="font-extrabold text-[18px] tracking-tight text-text">
             33 Days with St. Joseph
           </span>
         </Link>
-        <div className="ml-auto text-sm text-[var(--color-text-muted)] font-semibold tabular-nums">
+        <div className="ml-auto text-sm text-text-muted font-semibold tabular-nums">
           {mounted && hydrated ? (
             <span>
-              <span className="text-[var(--color-accent)]">{completed}</span>
+              <span className="text-accent">{completed}</span>
               <span className="opacity-60">/</span>
               <span>{TOTAL_DAYS}</span>
               <span className="ml-1 hidden sm:inline">complete</span>

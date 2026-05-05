@@ -23,10 +23,10 @@ function indicatorLabel(status: IndicatorStatus): string {
 function Indicator({ status }: { status: IndicatorStatus }) {
   const color =
     status === "completed"
-      ? "text-[var(--color-accent)]"
+      ? "text-accent"
       : status === "current"
-        ? "text-[var(--color-accent)]"
-        : "text-[var(--color-text-muted)]/50";
+        ? "text-accent"
+        : "text-text-muted/50";
   const glyph = status === "completed" ? "✓" : status === "current" ? "●" : "○";
   return (
     <span className={`inline-block w-4 text-center text-sm ${color}`} aria-hidden="true">
@@ -65,8 +65,8 @@ function SidebarContent() {
     return [
       "block rounded px-3 py-2 text-[15px] no-underline",
       active
-        ? "bg-[var(--color-accent-soft)] text-[var(--color-accent)] font-bold"
-        : "text-[var(--color-text)] hover:bg-[var(--color-accent-soft)]/60",
+        ? "bg-accent-soft text-accent font-bold"
+        : "text-text hover:bg-accent-soft/60",
       extra,
     ].join(" ");
   }
@@ -82,7 +82,7 @@ function SidebarContent() {
       id="site-sidebar"
       ref={navRef}
       aria-label="Daily prayers"
-      className="h-full flex flex-col bg-[var(--color-surface)]"
+      className="h-full flex flex-col bg-surface"
     >
       <div className="flex-1 overflow-y-auto px-3 py-6">
         <Link
@@ -100,7 +100,7 @@ function SidebarContent() {
           Introduction
         </Link>
 
-        <div className="mt-6 mb-2 px-3 text-[13px] font-bold uppercase tracking-[0.12em] text-[var(--color-text-muted)]">
+        <div className="mt-6 mb-2 px-3 text-[13px] font-bold uppercase tracking-[0.12em] text-text-muted">
           The 33 Days
         </div>
         <ul className="space-y-0.5">
@@ -148,11 +148,11 @@ function SidebarContent() {
           </Link>
         </div>
       </div>
-      <div className="border-t border-[var(--color-border)] px-5 py-3">
+      <div className="border-t border-border px-5 py-3">
         <button
           type="button"
           onClick={onReset}
-          className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] underline underline-offset-2"
+          className="text-xs text-text-muted hover:text-accent underline underline-offset-2"
         >
           Reset progress
         </button>
@@ -166,7 +166,7 @@ export function Sidebar() {
 
   return (
     <>
-      <aside className="hidden lg:block w-[280px] shrink-0 border-r border-[var(--color-border)] sticky top-16 h-[calc(100vh-4rem)]">
+      <aside className="hidden lg:block w-[280px] shrink-0 border-r border-border sticky top-16 h-[calc(100vh-4rem)]">
         <SidebarContent />
       </aside>
 
@@ -184,7 +184,7 @@ export function Sidebar() {
           onClick={() => setOpen(false)}
         />
         <div
-          className={`absolute left-0 top-0 h-full w-[280px] max-w-[85vw] bg-[var(--color-surface)] shadow-lg transition-transform ${
+          className={`absolute left-0 top-0 h-full w-[280px] max-w-[85vw] bg-surface shadow-lg transition-transform ${
             open ? "translate-x-0" : "-translate-x-full"
           }`}
           role="dialog"

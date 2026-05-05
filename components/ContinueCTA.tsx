@@ -29,13 +29,13 @@ export function ContinueCTA() {
         <>
           <Link
             href={progress.lastVisitedPath}
-            className="inline-flex items-center justify-center rounded px-6 py-3 bg-[var(--color-accent)] text-[var(--color-surface)] font-bold no-underline hover:opacity-90"
+            className="inline-flex items-center justify-center rounded px-6 py-3 bg-accent text-surface font-bold no-underline hover:opacity-90"
           >
             {continueLabel}
           </Link>
           <Link
             href="/day/1"
-            className="inline-flex items-center justify-center rounded px-6 py-3 border border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-accent)] font-semibold no-underline text-[var(--color-text)]"
+            className="inline-flex items-center justify-center rounded px-6 py-3 border border-border bg-surface hover:border-accent font-semibold no-underline text-text"
           >
             Start over from Day 1
           </Link>
@@ -44,13 +44,13 @@ export function ContinueCTA() {
         <>
           <Link
             href="/day/1"
-            className="inline-flex items-center justify-center rounded px-6 py-3 bg-[var(--color-accent)] text-[var(--color-surface)] font-bold no-underline hover:opacity-90"
+            className="inline-flex items-center justify-center rounded px-6 py-3 bg-accent text-surface font-bold no-underline hover:opacity-90"
           >
             Start with Day 1
           </Link>
           <Link
             href="/introduction"
-            className="inline-flex items-center justify-center rounded px-6 py-3 border border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-accent)] font-semibold no-underline text-[var(--color-text)]"
+            className="inline-flex items-center justify-center rounded px-6 py-3 border border-border bg-surface hover:border-accent font-semibold no-underline text-text"
           >
             Read the Introduction
           </Link>

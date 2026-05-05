@@ -20,7 +20,7 @@ export function VideoCard({
   const [open, setOpen] = useState(false);
   const dialogRef = useRef<HTMLDialogElement | null>(null);
 
-  const dialogAspect = orientation === "portrait" ? "aspect-[9/16]" : "aspect-video";
+  const dialogAspect = orientation === "portrait" ? "aspect-9/16" : "aspect-video";
   const watchUrl =
     orientation === "portrait"
       ? `https://www.youtube.com/shorts/${videoId}`
@@ -70,9 +70,9 @@ export function VideoCard({
         type="button"
         onClick={() => setOpen(true)}
         aria-label={`Play: ${title}`}
-        className="group flex flex-col h-full w-full text-left rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden hover:border-[var(--color-accent)] transition-colors cursor-pointer"
+        className="group flex flex-col h-full w-full text-left rounded-lg border border-border bg-surface overflow-hidden hover:border-accent transition-colors cursor-pointer"
       >
-        <div className="relative h-44 sm:h-56 bg-[var(--color-accent-soft)] overflow-hidden shrink-0">
+        <div className="relative h-44 sm:h-56 bg-accent-soft overflow-hidden shrink-0">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={thumbnail}
@@ -84,7 +84,7 @@ export function VideoCard({
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <span
               aria-hidden="true"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-black/60 group-hover:bg-[var(--color-accent)] transition-colors"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-black/60 group-hover:bg-accent transition-colors"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true">
                 <path d="M8 5v14l11-7z" />
@@ -93,10 +93,10 @@ export function VideoCard({
           </div>
         </div>
         <div className="px-3 py-2.5 flex-1">
-          <div className="text-[14px] font-bold leading-snug text-[var(--color-text)] line-clamp-2">
+          <div className="text-[14px] font-bold leading-snug text-text line-clamp-2">
             {title}
           </div>
-          <div className="text-[12px] text-[var(--color-text-muted)] mt-0.5">
+          <div className="text-[12px] text-text-muted mt-0.5">
             {author} · YouTube
           </div>
         </div>
@@ -106,14 +106,14 @@ export function VideoCard({
         ref={dialogRef}
         onClick={onBackdropClick}
         aria-label={title}
-        className={`fixed inset-0 m-auto p-0 rounded-lg bg-[var(--color-surface)] ${dialogWidth} max-h-[92vh] backdrop:bg-black/70 backdrop:backdrop-blur-sm overflow-hidden shadow-2xl`}
+        className={`fixed inset-0 m-auto p-0 rounded-lg bg-surface ${dialogWidth} max-h-[92vh] backdrop:bg-black/70 backdrop:backdrop-blur-sm overflow-hidden shadow-2xl`}
       >
-        <div className="flex items-center justify-between gap-3 px-4 py-2.5 border-b border-[var(--color-border)]">
+        <div className="flex items-center justify-between gap-3 px-4 py-2.5 border-b border-border">
           <div className="min-w-0">
-            <div className="text-[13px] font-bold text-[var(--color-text)] truncate">
+            <div className="text-[13px] font-bold text-text truncate">
               {title}
             </div>
-            <div className="text-[11px] text-[var(--color-text-muted)] truncate">
+            <div className="text-[11px] text-text-muted truncate">
               {author}
             </div>
           </div>
@@ -121,7 +121,7 @@ export function VideoCard({
             type="button"
             onClick={() => setOpen(false)}
             aria-label="Close video"
-            className="shrink-0 p-1.5 rounded text-[var(--color-text-muted)] hover:bg-[var(--color-accent-soft)] hover:text-[var(--color-accent)]"
+            className="shrink-0 p-1.5 rounded text-text-muted hover:bg-accent-soft hover:text-accent"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -146,7 +146,7 @@ export function VideoCard({
             href={watchUrl}
             target="_blank"
             rel="noreferrer noopener"
-            className="text-[12px] text-[var(--color-text-muted)] hover:text-[var(--color-accent)] underline underline-offset-2"
+            className="text-[12px] text-text-muted hover:text-accent underline underline-offset-2"
           >
             Open on YouTube ↗
           </a>

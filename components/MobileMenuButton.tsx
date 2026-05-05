@@ -8,7 +8,7 @@ export function MobileMenuButton() {
   return (
     <button
       type="button"
-      className="lg:hidden -ml-1 p-2 text-[var(--color-text)] hover:bg-[var(--color-accent-soft)] rounded"
+      className="lg:hidden -ml-1 p-2 text-text hover:bg-accent-soft rounded"
       aria-label={open ? "Close navigation menu" : "Open navigation menu"}
       aria-expanded={open}
       aria-controls="site-sidebar"

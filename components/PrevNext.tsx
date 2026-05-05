@@ -17,21 +17,21 @@ export function PrevNext({ path }: { path: string }) {
   return (
     <nav
       aria-label="Previous and next pages"
-      className="mt-16 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row gap-3 sm:gap-4 justify-between"
+      className="mt-16 pt-6 border-t border-border flex flex-col sm:flex-row gap-3 sm:gap-4 justify-between"
     >
       {prev ? (
         <Link
           href={prev.path}
-          className="group inline-flex items-center gap-2 px-4 py-3 rounded border border-[var(--color-border)] bg-[var(--color-surface)] hover:border-[var(--color-accent)] no-underline text-left"
+          className="group inline-flex items-center gap-2 px-4 py-3 rounded border border-border bg-surface hover:border-accent no-underline text-left"
         >
-          <span aria-hidden="true" className="text-[var(--color-text-muted)] group-hover:text-[var(--color-accent)]">
+          <span aria-hidden="true" className="text-text-muted group-hover:text-accent">
             ←
           </span>
           <span className="flex flex-col">
-            <span className="text-[11px] uppercase tracking-wider text-[var(--color-text-muted)]">
+            <span className="text-[11px] uppercase tracking-wider text-text-muted">
               Previous
             </span>
-            <span className="text-[15px] font-semibold text-[var(--color-text)]">
+            <span className="text-[15px] font-semibold text-text">
               {prev.label}
             </span>
           </span>
@@ -46,15 +46,15 @@ export function PrevNext({ path }: { path: string }) {
           className={[
             "group inline-flex items-center gap-2 px-4 py-3 rounded border no-underline text-right sm:text-right ml-auto",
             highlightNext
-              ? "bg-[var(--color-accent)] text-[var(--color-surface)] border-[var(--color-accent)]"
-              : "bg-[var(--color-surface)] border-[var(--color-border)] hover:border-[var(--color-accent)] text-[var(--color-text)]",
+              ? "bg-accent text-surface border-accent"
+              : "bg-surface border-border hover:border-accent text-text",
           ].join(" ")}
         >
           <span className="flex flex-col">
             <span
               className={[
                 "text-[11px] uppercase tracking-wider",
-                highlightNext ? "text-[var(--color-surface)]/80" : "text-[var(--color-text-muted)]",
+                highlightNext ? "text-surface/80" : "text-text-muted",
               ].join(" ")}
             >
               Next
@@ -65,8 +65,8 @@ export function PrevNext({ path }: { path: string }) {
             aria-hidden="true"
             className={
               highlightNext
-                ? "text-[var(--color-surface)]"
-                : "text-[var(--color-text-muted)] group-hover:text-[var(--color-accent)]"
+                ? "text-surface"
+                : "text-text-muted group-hover:text-accent"
             }
           >
             →
